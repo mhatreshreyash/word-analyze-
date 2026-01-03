@@ -1,4 +1,23 @@
 import streamlit as st
+
+libs = [
+    "feedparser",
+    "pandas",
+    "sklearn",
+    "wordcloud",
+    "matplotlib",
+    "vaderSentiment"
+]
+
+for lib in libs:
+    try:
+        __import__(lib)
+        st.success(f"{lib} loaded")
+    except ImportError:
+        st.error(f"{lib} NOT installed")
+
+
+import streamlit as st
 import feedparser
 import pandas as pd
 import matplotlib.pyplot as plt
