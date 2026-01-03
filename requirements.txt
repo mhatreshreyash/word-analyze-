@@ -4,3 +4,4 @@ pandas
 scikit-learn
 wordcloud
 matplotlib
+vaderSentiment
